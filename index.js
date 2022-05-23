@@ -7,8 +7,8 @@ const fs = require("fs");
 const questions = require("./templates/questions");
 
 const render = require("./templates/htmlRenderer");
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+const OUTPUT_DIR = path.resolve(__dirname, "generated_html");
+const outputPath = path.join(OUTPUT_DIR, "team_info.html");
 
 let team = [];
 
