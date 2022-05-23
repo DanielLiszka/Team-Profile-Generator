@@ -1,5 +1,6 @@
-const Employee = require("../lib/Employee.js");
+const Employee = require("../templates/Employee.js");
 
+//Run tests for the employee class
 describe("Employee", () => {
   const name = "Livia Iggy";
   const id = 23;
@@ -9,19 +10,19 @@ describe("Employee", () => {
   const testEmployee = new Employee(name, id, email);
 
   it("Should return the Employee name", () => {
-    expect(testEmployee.getName()).toBe(name);
+    expect(testEmployee.name).toBe(name);
   });
 
   it("Should return the Employee id", () => {
-    expect(testEmployee.getId()).toBe(id);
+    expect(testEmployee.id).toBe(id);
   });
 
   it("Should return the Employee email", () => {
-    expect(testEmployee.getEmail()).toBe(email);
+    expect(testEmployee.email).toBe(email);
   });
 
   it("Should return the Employee role", () => {
-    expect(testEmployee.getRole()).toBe(role);
+    expect(testEmployee.role).toBe(role);
   });
   
   it("Can create Employee instance", () => {

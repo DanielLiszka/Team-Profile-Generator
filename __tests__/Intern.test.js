@@ -1,5 +1,6 @@
-const Intern = require("../lib/Intern.js");
+const Intern = require("../templates/Intern.js");
 
+//Run tests for the Intern class
 describe("Intern", () => {
   const name = "Queen Osmond";
   const id = 4113;
@@ -9,23 +10,23 @@ describe("Intern", () => {
   const testIntern = new Intern(name, id, email, school);
 
   it("Should return the Intern name", () => {
-    expect(testIntern.getName()).toBe(name);
+    expect(testIntern.name).toBe(name);
   });
 
   it("Should return the Intern id", () => {
-    expect(testIntern.getId()).toBe(id);
+    expect(testIntern.id).toBe(id);
   });
 
   it("Should return the Intern school", () => {
-    expect(testIntern.getSchool()).toBe(school);
+    expect(testIntern.school).toBe(school);
   });
 
   it("Should return the Intern email", () => {
-    expect(testIntern.getEmail()).toBe(email);
+    expect(testIntern.email).toBe(email);
   });
 
   it("Should return the Intern role", () => {
-    expect(testIntern.getRole()).toBe(role);
+    expect(testIntern.role).toBe(role);
   });
     it("Can set Name", () => {
         const test_value = "James Matthews";
@@ -46,10 +47,5 @@ describe("Intern", () => {
         const test_value = "Virginia Commonwealth University";
         const test_object = new Intern(name,id,email,test_value,role);
         expect(test_object.school).toBe(test_value);
-    });
-    it("Can set role", () => {
-        const test_value = "Junior Developer";
-        const test_object = new Intern(name,id,email,school,test_value);
-        expect(test_object.role).toBe(test_value);
     });
 });
